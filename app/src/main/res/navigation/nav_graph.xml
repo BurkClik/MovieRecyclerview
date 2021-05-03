@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movieFragment">
+
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.movierecyclerview.ui.movie.list.MovieFragment"
+        android:label="MovieFragment" >
+        <action
+            android:id="@+id/movieAction"
+            app:destination="@id/movieDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetail"
+        android:name="com.example.movierecyclerview.ui.detail.MovieDetailFragment"
+        android:label="MovieDetail" >
+        <argument
+            android:name="movieTitle"
+            app:argType="string"
+            android:defaultValue="movie title" />
+        <argument
+            android:name="movieImage"
+            app:argType="string"
+            android:defaultValue="-1" />
+        <argument
+            android:name="movieOverview"
+            app:argType="string"
+            android:defaultValue="-1" />
+    </fragment>
+</navigation>

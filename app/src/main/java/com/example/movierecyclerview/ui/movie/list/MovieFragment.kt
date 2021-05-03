@@ -15,6 +15,7 @@ class MovieFragment : Fragment() {
     private var _binding: FragmentMovieBinding? = null
     private val binding get() = _binding!!
     private val movieAdapter = MovieAdapter()
+    private val popularMovieAdapter = PopularMovieAdapter()
 
     private val viewModel by viewModels<MovieViewModel>()
 
@@ -39,6 +40,15 @@ class MovieFragment : Fragment() {
 
         viewModel.response.observe(viewLifecycleOwner) {
             movieAdapter.submitList(it)
+        }
+
+        binding.recyclerViewPopularMovies.apply {
+            adapter = popularMovieAdapter
+            addItemDecoration(PopularMovieDecoration())
+        }
+
+        viewModel.response.observe(viewLifecycleOwner) {
+            popularMovieAdapter.submitList(it)
         }
 
         movieAdapter.itemClickListener = {

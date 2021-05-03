@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:background="@color/primary">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageViewMoviePoster"
+        app:shapeAppearanceOverlay="@style/Widget.MovieRecyclerView.RoundedImageView"
+        android:layout_width="148dp"
+        android:layout_height="160dp"
+        tools:scaleType="centerCrop"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/textViewMovieTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/text_color"
+        tools:text="Tenet" />
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">MovieRecyclerview</string>
     <string name="overview_text">After the terrorist attack at the Kiev Opera House, a CIA agent teams up with British intelligence to confront a Russian oligarch who made his fortune in the arms trade</string>
+    <string name="movie_title_popular_movies">Popular Movies</string>
+    <string name="movie_title_genres">Genres</string>
 </resources>
